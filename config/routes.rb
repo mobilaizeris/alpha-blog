@@ -6,7 +6,6 @@ Rails.application.routes.draw do
 
   root 'page#home'
   get 'about', to: 'page#about'
-  get 'articles/new', to: 'articles#new'
 
   resources :articles
 
