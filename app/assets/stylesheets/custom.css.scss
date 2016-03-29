@@ -1,0 +1,89 @@
+$navbar-default-bg: #D91121;
+
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#logo {
+	float:left;
+	font-size: 1.7em;
+	color: #0C0B0B;
+	text-transform: uppercase;
+	letter-spacing: -1px;
+	font-weight: bold;		
+}
+
+#logo:hover {
+	color: #fff;
+	text-shadow: 0 0 3px #F4FB1E;
+}
+
+#links {
+	color: #FFF119;
+}
+
+#links:hover {
+	color: #000000;
+	font-weight: bold;
+}
+
+.border {
+    border-radius: 0px;
+    border-width: 0px;
+}
+
+.center {
+	text-align: center;
+}
+
+.jumbotron {
+	background-image: url("ruby-1024x576.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 576px;
+	background-position: center center; 
+}
+
+.jumbotron h1 {
+	color: #FF5733;
+	text-align: center;
+	vertical-align: text-top;
+	margin-top: -10px;
+	margin-bottom: 66px;
+	letter-spacing: 2px;
+	font-weight: bold;
+	text-transform: uppercase;
+	text-decoration: underline overline;
+}
+
+.btn-lg {
+	font-size: 1.05em;
+	color: #5C5C5C;
+	border-color: #858484;
+	background-color: white;
+	border-radius: 2px;
+}
+
+footer {
+		margin-top: 20px;
+		padding-top: 5px;
+		border-top: solid #eaeaea;
+		color: #777;
+}
+
+footer a:hover{
+	color: #222;
+}
+
+footer small {
+	float:left;
+}
+
+footer ul {
+	float:right;
+	font-size: small;
+	list-style: none;
+}
+footer ul li {
+	float:left;
+	margin-left: 10px;
+}
