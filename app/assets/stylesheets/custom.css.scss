@@ -63,7 +63,22 @@ $navbar-default-bg: #D91121;
 	border-radius: 2px;
 }
 
+.article-actions {
+	border-top: 1px;
+	padding-top: 5px;
+}
+
+.description{
+	margin-top: 0;
+}
+
 footer {
+		position: fixed;
+		bottom: 0;
+		left:0;
+		right:0;
+		padding-left: 5px;
+		padding-right: 5px;
 		margin-top: 20px;
 		padding-top: 5px;
 		border-top: solid #eaeaea;
