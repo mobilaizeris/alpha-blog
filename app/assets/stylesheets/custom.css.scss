@@ -62,7 +62,10 @@ $border-radius-base: 0;
 	background-color: white;
 	border-radius: 2px;
 }
-
+.article-meta-details {
+	border-top: 1px solid #eaeaea;
+	margin-top: 15px;
+}
 .article-actions {
 	border-top: 1px;
 	padding-top: 5px;
