@@ -70,10 +70,14 @@
   </div><!-- /.container-fluid -->
   <script>
     $(function() {
-      $('.dropdown-toggle').on('click', function() {
-        //$('dropdown').slideToggle(200);
-        //$('.dropdown').on('click', function() { alert('nu paspaudei'); })
-      });
+      $('.dropdown').on('show.bs.dropdown', function(e){
+    $(this).find('.dropdown-menu').first().stop(true, true).slideDown(200);
+  });
+
+  // ADD SLIDEUP ANIMATION TO DROPDOWN //
+  $('.dropdown').on('hide.bs.dropdown', function(e){
+    $(this).find('.dropdown-menu').first().stop(true, true).slideUp(200);
+  });
     });
   </script>
 </nav>

@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-	before_action :set_article, only: [:edit, :update, :show, :destroy]
+	before_action :set_article, only: [:edit, :update, :show, :destroy, :comments, :post_comment]
 	before_action :require_user, except: [:index, :show]
 	before_action :require_same_user, only: [:edit, :update, :destroy]
 
@@ -43,9 +43,19 @@ class ArticlesController < ApplicationController
 		redirect_to articles_path
 	end
 
+	def comments
+		render partial: 'comments'
+	end
+
+	def post_comment
+		@comment = @article.comments.new(params.permit(:description).merge(user: current_user))
+		@comment.save
+		comments
+	end
+
 	private
 	def set_article
-		@article = Article.find(params[:id])	
+		@article = Article.find(params[:id] || params[:article_id])	
 	end
 
 	def article_params

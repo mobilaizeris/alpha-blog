@@ -7,7 +7,10 @@ Rails.application.routes.draw do
   root 'page#home'
   get 'about', to: 'page#about'
 
-  resources :articles
+  resources :articles do
+    get 'comments', on: :member
+    post 'comments', to: :post_comment
+  end
 
   get 'signup', to: 'users#new'
   resources :users, exept: [:new]
@@ -17,6 +20,7 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
 
   resources :categories, except: [:destroy]
+
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

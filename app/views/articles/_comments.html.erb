@@ -1,0 +1,21 @@
+<div class="row">
+	<div class="col-xs-8 col-xs-offset-2">
+		<div class="row form-group">
+
+			<div class="col-sm-12">
+					<%= text_area(:comment, :description, {row: 10, class:"form-control", placeholder: "Comment", value: nil}) %>
+			</div>
+			<br><br><br>
+
+			<div class="col-sm-12">
+					<%= submit_tag "Comment the article", class:"btn btn-primary btn-large", id:'submit-btn' %>
+			</div>
+
+			<% @article.comments.each do |comment| %>
+				<div class="comment-block">
+					<%= comment.description %>
+				</div>
+			<%end%>
+		</div>
+	</div>
+</div>
